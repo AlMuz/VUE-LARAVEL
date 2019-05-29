@@ -11,10 +11,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <router-link class="nav-link" to="/login">Login</router-link>
+            <router-link class="nav-link" to="/login">{{ $t("navbar.login") }}</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/signup">Signup</router-link>
+            <router-link class="nav-link" to="/signup">{{ $t("navbar.signup") }}</router-link>
           </li>
         </ul>
       </div>
@@ -26,9 +26,7 @@
 export default {
   mounted() {
   },
-
   computed: {
-
   }
 }
 </script>
