@@ -14,10 +14,17 @@ import store from './store'
 Vue.use(VueNoty);
 Vue.use(wysiwyg, {});
 
+Vue.config.productionTip = false
+
+const authData = localStorage.getItem("auth");
+
 const app = new Vue({
   store,
   el: '#app',
   router: Routes,
+  data: {
+    auth: authData ? JSON.parse(authData) : {}
+  },
   render: h => h(App)
 })
 
