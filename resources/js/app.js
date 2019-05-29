@@ -3,12 +3,13 @@ import Vue from 'vue'
 import VueNoty from 'vuejs-noty'
 import wysiwyg from "vue-wysiwyg"
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'vue-wysiwyg/dist/vueWysiwyg.css';
 import 'vuejs-noty/dist/vuejs-noty.css'
 
 import Routes from '@/js/routes/routes'
 import store from '@/js/store/'
-import i18n from './i18n'
+import i18n from '@/js/i18n'
 
 import App from '@/js/views/app.vue'
 
