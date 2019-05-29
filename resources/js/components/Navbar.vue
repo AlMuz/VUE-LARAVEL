@@ -18,15 +18,28 @@
           </li>
         </ul>
       </div>
+      <div class="locale-changer">
+        <select class="form-control form-control-sm" v-model="$i18n.locale" @change="onChange($event)">
+          <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+        </select>
+      </div>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
-  mounted() {
+  methods: {
+    onChange(event) {
+
+      var lang = event.target.value;
+      // saving language to localStorage
+      localStorage.setItem("language", lang);
+    }
   },
-  computed: {
+  data () {
+
+    return { langs: ['en', 'ru'] }
   }
 }
 </script>
